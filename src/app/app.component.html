@@ -1,0 +1,65 @@
+<!-- Happy Valentines day Codepen! -->
+<div class="bgoverlay">
+	<canvas id="stage" width="100%" height="100%"></canvas>
+	<div style="text-align: center;
+    color: white;">
+		<h1>Happy Valentine’s Day</h1> <input type="text" placeholder="Type your name here.." [(ngModel)]="name">
+	</div>
+	<div class="container1" [ngStyle]="{'color':isOpen === false ? 'red' : 'black' }" [ngClass]="{'open': isOpen}">
+		<span class="ico">
+			<span class="ico2"></span>
+			<span class="title" (click)="isOpen=true;">Open Me</span>
+		</span>
+		<div class="endtext open">
+			<span (click)="isOpen=false;$event.stopPropagation()" class="close" title="Restart"><i
+					class="fa fa-times"></i></span>
+			<span [innerHtml]="iloveyouMsg"></span>
+			<h1 class="ml2">I love you baby</h1>
+			<span [innerHtml]="iloveyouMsg"></span>
+			<P>
+				You're the CSS to my HTML File.
+				<br>You are my semicolon; always present in everything I do.
+				<br>My love for you cannot be measured with an int, not with a long, and  not even with an array. It is out of bounds and infinite….
+			</P>
+			<h3>~{{name}}</h3>
+			<span [innerHtml]="iloveyouMsg"></span>
+
+		</div>
+	</div>
+</div>
+<div *ngIf="isOpen" class="container">
+	<div class="glass"></div>
+	<div class="thorns">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="glow"></div>
+	<div class="rose-leaves">
+		<div></div>
+		<div></div>
+	</div>
+	<div class="rose-petals">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div class="sparkles">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+</div>
